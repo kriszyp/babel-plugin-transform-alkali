@@ -39,7 +39,7 @@ import { react, Div } from 'alkali'
 // create a div with its text bound to the sum
 parent.appendChild(new Div(sum))
 ```
-And the reactive expressions maintain operator relationships, so alkali's reversible modifications are supported as well:
+And the reactive expressions maintain operator relationships, so alkali's reversible data flow is supported as well:
 ```
 let a = react(2)
 let doubleA = react(a * 2)
