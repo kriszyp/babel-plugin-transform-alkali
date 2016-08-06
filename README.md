@@ -1,5 +1,5 @@
 # babel-plugin-transform-alkali
-This babel plugin will transform expressions that use a `react` keyword/call to produce reactive variables. This relies on [alkali](https://github.com/kriszyp/alkali) for variable operations that produces a reactively bound variables.
+This babel plugin will transform expressions that use a `react` keyword/call to produce reactive variables. This relies on [alkali](https://github.com/kriszyp/alkali) for variable operations that produce reactively bound variables.
 
 ## Installation
 
@@ -13,7 +13,7 @@ The basic format of using the transform is to write reactive expressions in the 
 ```
 react(expression)
 ```
-The `react` variable should be imported from alkali. The `expression` will be transformed to code that will reactively respond to any changes in inputs. For example:
+The `react` variable should be imported from alkali. The `expression` will be transformed to code that will reactively respond to any changes in inputs values, reflecting them in the output variable. For example:
 ```
 import { react } from 'alkali'
 let a = react(2)
