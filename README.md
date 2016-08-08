@@ -33,6 +33,11 @@ doubleFoo.valueOf() -> 6
 react(obj.foo = 5)
 doubleFoo.valueOf() -> 10
 ```
+Function and method calls can be made written in reactive expressions as well. These calls will be performed lazily/on-demand, and reexecuted as needed. The target function will be called with the values of the variables (not the variables themselves). For example:
+```
+let smallest = react(Math.min(a, b))
+```
+
 The `react` operator returns alkali variables, that can be bound to DOM elements or any other alkali target.
 ```
 import { react, Div } from 'alkali'
