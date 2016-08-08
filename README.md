@@ -46,6 +46,8 @@ let doubleA = react(a * 2)
 react(doubleA = 10) // will flow back through the expression
 a.valueOf() -> 5
 ```
+The `react` function can take multiple arguments, the last argument output will be returned as the variable from the `react` call.
+
 ## Transform Usage
 
 ### Via `.babelrc` (Recommended)
