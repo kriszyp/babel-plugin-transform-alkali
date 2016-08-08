@@ -23,7 +23,7 @@ sum.valueOf() -> 6
 a.put(4)
 sum.valueOf() -> 8
 ```
-Reactive properties and assignments are supported as well, so we can write:
+Reactive properties and assignments are supported as well. Property access within a reactive expression will be converted to a property variable (basically `obj.prop` -> `obj.property('prop')`, with object mappings and safety checks). And assignments within a reactive expression will be converted to a `put` call (basically `v = 'hi'` -> `v.put('hi')` with similar variable mapping/creation as necessary). For example:
 ```
 let obj = react({
   foo: 3
