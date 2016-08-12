@@ -1,8 +1,8 @@
 {
-  "dependencies": {
-  },
+  "dependencies": {},
   "description": "Transform reactive code to use alkali API",
   "devDependencies": {
+    "babel-cli": "^6.11.4",
     "babel-helper-plugin-test-runner": "^6.8.0"
   },
   "directories": {},
