@@ -10,11 +10,23 @@ var tests = {
     let f = react(!bool)
   },
   cond: function() {
-    let cond = react(f ? num : sum)
+    let cond = {
+      condProp: react(f ? num : sum)
+    }
   },
   call: function() {
     let result
     react(result = Math.min(num, sum))
+  },
+  object: function() {
+    react({
+      num,
+      sum: sum * 2,
+      three: 3
+    })
+  },
+  array: function() {
+    react(Math.max.apply(null, [num, 3, sum]))
   },
   boundGenerator: function() {
     react((function*() {
