@@ -30,7 +30,8 @@ var tests = {
   },
   boundGenerator: function() {
     react((function*() {
-      test()
+      var a = 3
+      test(2 * num)
     }).bind(this))
   }
 }
