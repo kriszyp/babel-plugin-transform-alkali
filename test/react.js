@@ -33,12 +33,19 @@ var tests = {
       var a = 3
       test(2 * num)
     }).bind(this))
-  }
+  },
+  decorator: `
+  () => {
+const VF = VArray.of(Foo)
+class Foo {
+  @reactive foo: {goo: VF[], noo: string, b: boolean, n: number, o: {}}
+}
+}`
 }
 var test
 for (var testName in tests) {
   var result = require("babel-core").transform('test=' + tests[testName].toString(), {
-    plugins: ["transform-alkali"]
+    plugins: ["transform-alkali", 'transform-class-properties', 'transform-flow-strip-types']
   })
   console.log('transformed', result.code)
   //eval(result.code)()
